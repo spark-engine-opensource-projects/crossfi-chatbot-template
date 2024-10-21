@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Compile to modern JavaScript
+    "module": "ESNext", // Use ES modules
+    "jsx": "preserve", // Use the React JSX transform
+    "lib": [
+      "DOM",
+      "ES2020"
+    ], // Include DOM and ES2020 libraries
+    "strict": true, // Enable strict type checking
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true, // Generate declaration files
+    "outDir": "./dist", // Output directory for compiled JavaScript files
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ], // Include custom types
+    "resolveJsonModule": true, // Allow importing .json files
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "src/**/*",
+    "types/**/*",
+    "src/components/useChatbotContext.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

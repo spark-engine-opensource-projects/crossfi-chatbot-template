@@ -1,0 +1,31 @@
+/* styles/chatbot.module.css */
+.chatbot {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.messageBox { 
+  width: 100%;
+  margin: auto;
+}
+
+.botContainer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  margin-bottom: 8px;
+}

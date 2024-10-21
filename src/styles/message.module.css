@@ -1,0 +1,30 @@
+/* styles/message.module.css */
+
+.messageContainer {
+  display: flex;
+  justify-content: flex-start; /* Default to align bot messages to the left */
+  margin-bottom: 10px; /* Add some space between messages */
+}
+
+.userMessage {
+  background-color: #e0f7fa; /* Default user background */
+  align-self: flex-end; /* Align user message container to the right */
+  justify-content: flex-end;
+  text-align: right; /* Message text aligned to the left */
+  border-radius: 8px;
+  max-width: 70%;
+  min-width: 7.5%;
+  padding: 16px;
+  word-wrap: break-word;
+}
+
+.botMessage {
+  background-color: rgba(160, 160, 160, 0.1); /* Default bot background */
+  text-align: left;
+  border-radius: 8px;
+  max-width: 70%;
+  min-width: 7.5%;
+  padding: 16px;
+  word-wrap: break-word;
+  align-self: flex-start;
+}

@@ -73,6 +73,7 @@ const Chatbot: React.FC<ChatbotProps> = ({
 }) => {
   const [messages, setMessages] = useState<MessageType[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isConnected, setIsConnected] = useState(false);
 
   const fetchChatResponse = async (
     prompt: string,
@@ -249,7 +250,7 @@ const Chatbot: React.FC<ChatbotProps> = ({
                       <Title order={1} mt="md">{title}</Title>
                       <Text c="dimmed">{description}</Text>
                       <Flex mt="lg" gap="md">
-        <ConnectButton/>
+        <ConnectButton setIsConnected={setIsConnected} isConnected={isConnected}/>
       </Flex>
                     </Flex>
                   </Center>
@@ -263,7 +264,10 @@ const Chatbot: React.FC<ChatbotProps> = ({
                   />
                 )}
               </ChatbotWindow>
+              {isConnected && (
                 <ChatInput buttonColor='#0cc2fe' />
+
+              )}
             </>
           )}
         </ChatbotContext.Provider>

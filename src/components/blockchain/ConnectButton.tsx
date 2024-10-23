@@ -7,7 +7,14 @@ import PurchaseCredits from './PurchaseCredits';
 
 const TARGET_CHAIN_ID = 4157; // Your target network chain ID
 
-export default function ConnectWallet() {
+interface ConnectWalletProps {
+    isConnected: boolean;
+    setIsConnected: React.Dispatch<React.SetStateAction<boolean>>;
+  }
+
+export default function ConnectWallet({
+  setIsConnected
+}: ConnectWalletProps) {
   const [provider, setProvider] = useState<BrowserProvider | null>(null);
   const [signer, setSigner] = useState<JsonRpcSigner | null>(null);
   const [userAddress, setUserAddress] = useState<string>('');
@@ -53,6 +60,7 @@ export default function ConnectWallet() {
       setLoading(false);
 
       console.log('Wallet connected:', address, 'Chain ID:', Number(network.chainId));
+      setIsConnected(true)
       fetchCredits();
     } catch (error) {
       setLoading(false);

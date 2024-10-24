@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
       <Chatbot
         projectId="adbfd15b-1499-4a7a-8cdc-416e8630c33c"
         chatApiRoute="/api/chatbot"
-        sparkEngineApiRoute="/api/complete"
+        sparkEngineApiRoute="/api/useCredits"
         callSparkEngineWhen="Collect user's favorite color, favorite food, and workplace skills"
         width="90%"
         height="90vh"

@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "@emotion/styled": "^11.13.0",
+    "@supabase/supabase-js": "^2.45.4",
     "@mantine/core": "7.10.0",
     "@mantine/hooks": "7.10.0",
     "@tabler/icons-react": "^2.2.0",

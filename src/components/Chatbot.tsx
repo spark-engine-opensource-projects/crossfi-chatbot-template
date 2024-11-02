@@ -147,6 +147,7 @@ const Chatbot: React.FC<ChatbotProps> = ({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: summary, projectId }),
+        credentials: 'include' 
       });
   
       if (!response.ok) {

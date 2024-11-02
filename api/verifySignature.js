@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         if (data.success) {
             if (cookies) {
                 // Forward the Set-Cookie header to the frontend
-                res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Secure; SameSite=Strict; Path=/`);
+                res.setHeader('Set-Cookie', cookies);
             }
             console.log('Authentication successful');
             res.status(200).json(data);

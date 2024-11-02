@@ -158,7 +158,7 @@ const Chatbot: React.FC<ChatbotProps> = ({
       return data;
     } catch (error) {
       console.error('Error fetching from Spark Engine API:', error);
-      return { output: 'Sorry, something went wrong with Spark Engine.', name: 'Spark Engine' };
+      return {item: { output: 'Sorry, something went wrong with Spark Engine.', name: 'Spark Engine' }};
     }
   };
   
@@ -186,10 +186,10 @@ const Chatbot: React.FC<ChatbotProps> = ({
   
       const sparkEngineResponse = await sendToSparkEngine(summary);
   
-      const selectedResponses = sparkEngineResponse.data.map((item: any) => ({
+      const selectedResponses = (sparkEngineResponse?.data || [{ output: 'Sorry, something went wrong with Spark Engine.', name: 'Spark Engine' }]).map((item: any) => ({
         message: item?.output || 'Invalid data',
         sender: item?.name || 'Sparkchat',
-      }));
+      }));      
   
       setMessages((prev) => [...prev.slice(0, prev.length - 1), ...selectedResponses]);
     } else {

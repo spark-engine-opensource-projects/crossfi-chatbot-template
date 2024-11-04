@@ -2,7 +2,7 @@ Here’s the revised README with the updated sections:
 
 ---
 
-![GitHub Banner](./github-banner.png)
+![GitHub Banner](./public/github-banner.png)
 
 # CrossFi Chatbot Template
 
@@ -11,8 +11,8 @@ A blockchain-powered AI chatbot template built for the **CrossFi Chain** ecosyst
 [![GitHub](https://img.shields.io/badge/GitHub-Open%20Source-blue?logo=github)](https://github.com/spark-engine-ai)
 [![Discord](https://img.shields.io/badge/Join%20Our%20Community-Discord-blue?logo=discord)](https://discord.gg/VAQA5c32jM)
 
-![Chatbot Preview 1](./github-img-1.jpg)
-![Chatbot Preview 2](./github-img-2.jpg)
+![Chatbot Preview 1](./public/github-img-1.jpg)
+![Chatbot Preview 2](./public/github-img-2.jpg)
 
 ## What is CrossFi?
 

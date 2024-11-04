@@ -2,6 +2,8 @@ Here’s the revised README with the updated sections:
 
 ---
 
+![GitHub Banner](./github-banner.png)
+
 # CrossFi Chatbot Template
 
 A blockchain-powered AI chatbot template built for the **CrossFi Chain** ecosystem. This template enables users to access **Spark Engine’s** multi-agent systems and cognitive AI by connecting their web3 wallets, paying with **XFI**, and interacting via a Groq-hosted AI model. Designed specifically for CrossFi applications, this chatbot offers a decentralized, secure, and AI-driven experience on the CrossFi Chain.
@@ -9,7 +11,8 @@ A blockchain-powered AI chatbot template built for the **CrossFi Chain** ecosyst
 [![GitHub](https://img.shields.io/badge/GitHub-Open%20Source-blue?logo=github)](https://github.com/spark-engine-ai)
 [![Discord](https://img.shields.io/badge/Join%20Our%20Community-Discord-blue?logo=discord)](https://discord.gg/VAQA5c32jM)
 
-![GitHub Banner](./github-banner.png)
+![Chatbot Preview 1](./github-img-1.jpg)
+![Chatbot Preview 2](./github-img-2.jpg)
 
 ## What is CrossFi?
 

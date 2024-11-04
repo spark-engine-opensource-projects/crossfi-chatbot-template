@@ -22,6 +22,7 @@
   ],
   "author": "Your Name",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "@emotion/styled": "^11.13.0",
     "@supabase/supabase-js": "^2.45.4",

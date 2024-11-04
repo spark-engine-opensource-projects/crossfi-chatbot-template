@@ -106,6 +106,17 @@ export default function ConnectWallet({ setIsConnected }: ConnectWalletProps) {
       });
       const data1 = await response1.json();
 
+      console.log("Here is the nonce => ", data1.nonce);
+      //@ts-ignore
+      const signature = await signer.signMessage(data1!.nonce.toString());
+      console.log("Signer ran successfully. ");
+      const response2 = await fetch("/api/verifySignature", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ walletAddress: userAddress, signature }),
+      });
+      const data2 = await response.json();
+
       console.log("credits are here => ", data1.credits);
       if (data.credits !== undefined) {
         setCredits(data.credits);

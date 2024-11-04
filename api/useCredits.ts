@@ -12,20 +12,21 @@ export default async function handler(req: any, res: any) {
   }
 
   // Extract input parameters from the request body
-  const { wallet_address, project_id, prompt, fileUrls = [] } = req.body;
+  const { prompt, fileUrls = [] } = req.body;
+
+  const project_id = "362bc660-dd60-4b89-9ab7-79560cdece73";
 
   // Ensure all required fields are provided
-  if (!wallet_address || !project_id || !prompt) {
+  if (!prompt) {
     res.status(400).json({
-      message:
-        "Missing required fields: wallet_address, project_id, and prompt",
+      message: "Missing required fields: and prompt",
     });
     return;
   }
 
   try {
     // Make a call to the API route for web3completion
-    const apiUrl = `https://www.sparkengine.ai/api/engine/web3completion`;
+    const apiUrl = `/api/web3completion`;
 
     // Structure the API call with all required parameters
     const response = await fetch(apiUrl, {
@@ -34,7 +35,6 @@ export default async function handler(req: any, res: any) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        wallet_address,
         project_id,
         prompt,
         fileUrls, // Optional array of file URLs if provided

@@ -14,7 +14,7 @@ export default async function handler(req: any, res: any) {
 
     const response = await sparkEngine.createCompletion({
       prompt,
-      project_id: projectId,
+      project_id: "362bc660-dd60-4b89-9ab7-79560cdece73",
     });
 
     console.log(response.data);

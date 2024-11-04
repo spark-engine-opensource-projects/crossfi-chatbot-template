@@ -1,19 +1,43 @@
-# Spark Engine SDK
+Here’s the revised README with the updated sections:
 
- Library for calling out to Spark Engine Multi-Agent System and Cognitive AI projects as well as building extremely fast chatbots powered by Spark Engine & Groq models
+---
+
+# CrossFi Chatbot Template
+
+A blockchain-powered AI chatbot template built for the **CrossFi Chain** ecosystem. This template enables users to access **Spark Engine’s** multi-agent systems and cognitive AI by connecting their web3 wallets, paying with **XFI**, and interacting via a Groq-hosted AI model. Designed specifically for CrossFi applications, this chatbot offers a decentralized, secure, and AI-driven experience on the CrossFi Chain.
 
 [![GitHub](https://img.shields.io/badge/GitHub-Open%20Source-blue?logo=github)](https://github.com/spark-engine-ai)
 [![Discord](https://img.shields.io/badge/Join%20Our%20Community-Discord-blue?logo=discord)](https://discord.gg/VAQA5c32jM)
 
 ![GitHub Banner](./github-banner.png)
 
+## What is CrossFi?
+
+**CrossFi** is an innovative blockchain ecosystem built on its own Layer 1 (L1) blockchain, bridging traditional financial solutions with the security, transparency, and decentralization of blockchain technology. With CrossFi, users can access a broad range of decentralized finance (DeFi) tools, crypto banking services, and multi-chain functionality—all within a single, user-friendly app. The ecosystem empowers individuals and businesses to use crypto as easily as traditional financial assets, supporting seamless, fast, and secure transactions.
+
+### CrossFi’s Goals and Significance
+
+CrossFi’s mission is to redefine financial interactions by creating a decentralized financial infrastructure that brings together crypto and traditional financial services. Key goals include:
+
+- **Decentralized Financial Access**: Empowering users to engage in financial activities—such as payments, lending, and borrowing—without intermediaries or centralized oversight.
+- **Cross-Chain Interoperability**: Providing multi-chain capabilities to enhance DeFi applications, enabling users to access assets and liquidity across various blockchains.
+- **Non-Custodial Banking**: Prioritizing user control by offering non-custodial crypto banking and payment solutions, allowing users full ownership of their assets.
+- **Real-World Asset Integration**: Through xAssets, users can mint and trade synthetic tokens representing commodities, stocks, and other assets, expanding financial opportunities within the crypto world.
+- **Web3 Payment Gateway**: Enabling fast, secure crypto payments through a non-custodial gateway, linking wallets like Metamask for direct crypto-to-fiat transactions.
+
+CrossFi’s significance lies in its pioneering decentralized financial ecosystem, using blockchain technology to bring transparency, security, and accessibility to financial services.
+
+## What is Spark Engine?
+
+**Spark Engine** is a cutting-edge cognitive AI and multi-agent system platform. It provides powerful AI capabilities, enabling users to build intelligent systems that interact dynamically and handle complex tasks. Using Spark Engine, developers can create robust chatbots, autonomous agents, and AI-driven applications that respond intelligently to user input and manage multi-step conversations seamlessly.
+
+Spark Engine’s unique value lies in its multi-agent architecture, which allows for coordination between different AI components to complete complex tasks. It also integrates smoothly with **Groq** for natural language processing, supporting diverse applications from customer service chatbots to sophisticated data-driven AI solutions. In the CrossFi Chatbot Template, Spark Engine powers the chatbot’s cognitive abilities, delivering interactive, goal-oriented AI experiences through blockchain-driven access.
+
 ## Overview
 
-The **Spark Engine SDK** is a versatile tool built with **Next.js** and **React**, enabling developers to create AI-powered chatbots and multi-agent systems using the **Spark Engine API**. This SDK allows for dynamic conversation management, responsive UI components, and seamless backend integration, making it ideal for building sophisticated chat interfaces and interactive AI experiences. It supports deployment to platforms like Vercel, making it highly scalable and efficient. 
+The **CrossFi Chatbot Template** is a web3-integrated AI chatbot framework using **Next.js** and **React**, specifically tailored for the CrossFi Chain. This template allows users to interact with the **Spark Engine** API without an API key and instead using CrossFi's native token ($XFI), where users can pay in **XFI** for access to advanced AI systems. The chatbot uses **Groq** for natural language processing, enabling it to collect and process user information, then connect to Spark Engine through a secure cookie-based method. This enables a fully decentralized and crypto-driven user experience.
 
-This SDK & NPM library uses Groq for the chat interactions, calling Spark Engine when certain information is collected or a task is carried out within the conversation.
-
-For more comprehensive documentation, visit [SparkEngine Documentation](https://docs.sparkengine.ai).
+For more detailed documentation on using the CrossFi Chatbot Template, visit [SparkEngine Documentation](https://docs.sparkengine.ai).
 
 ## Table of Contents
 
@@ -32,28 +56,26 @@ For more comprehensive documentation, visit [SparkEngine Documentation](https://
 
 ## Features
 
-- **Dynamic Conversations**: Easily define custom chatbot tasks, collect user data, and manage conversations dynamically.
-- **API Integration**: Connect seamlessly to the **Spark Engine API** for generating responses, completing tasks, and managing multi-agent interactions.
-- **Flexible Components**: Includes customizable components for building interactive chat interfaces quickly and efficiently.
+- **Web3 Payment Integration**: Users can connect their web3 wallet and pay with XFI to unlock AI capabilities powered by Spark Engine.
+- **Dynamic Conversations**: Configure chatbot tasks to collect user data, manage conversations, and interact with CrossFi’s L1 blockchain.
+- **Modular, Customizable Components**: Flexible UI components allow you to quickly build a customized, interactive chat interface that reflects your brand.
 
 ## Prerequisites
 
-Before using the Spark Engine SDK, ensure you have the following:
+Before setting up the CrossFi Chatbot Template, make sure you have:
 
-- **Node.js** (v14.x or higher)
-- **Next.js** (v12.x or higher)
-- An account with [Spark Engine](https://sparkengine.ai) to obtain your Spark API key.
-- A **Vercel account** (or other hosting platform) for deploying serverless API functions.
+- **Metamask, CrossX or compatible Web3 Wallet** that works with CrossFi Chain
+- A CrossFi account and **XFI** tokens for testing transactions
 
 ## Installation
 
-### Option 1: Cloning the Repository
+### Cloning the Repository
 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/spark-engine-opensource-projects/sparkengine-sdk
-   cd sparkengine-sdk
+   git clone https://github.com/spark-engine-opensource-projects/crossfi-chatbot-template
+   cd crossfi-chatbot-template
    ```
 
 2. **Install Dependencies:**
@@ -66,24 +88,11 @@ Before using the Spark Engine SDK, ensure you have the following:
 
 3. **Set Up Environment Variables:**
 
-   Create a `.env.local` file at the root of your project and add the following:
+   Create a `.env` file at the root of your project with the following variables:
 
    ```bash
    GROQ_API_KEY=your-groq-api-key
-   SPARK_ENGINE_API_KEY=your-spark-api-key
    ```
-
-### Option 2: Install via NPM
-
-You can also install the SDK directly from npm:
-
-```bash
-npm install sparkengine
-# or
-yarn add sparkengine
-```
-
-For more details on usage and configuration, visit the [official SparkEngine documentation](https://docs.sparkengine.ai).
 
 ## Usage
 
@@ -95,76 +104,79 @@ For more details on usage and configuration, visit the [official SparkEngine doc
    npm run dev
    ```
 
-2. Navigate to `http://localhost:3000` to view the application. The chatbot will interact with users based on the configurations you set.
-
-3. **Example Page**: Visit `/example-page` to see a sample chatbot implementation using the SDK. You can define tasks like collecting user information and setting up multi-step goals for the bot to accomplish.
+2. Open `http://localhost:3000` in your browser to interact with the chatbot interface, customized for CrossFi.
 
 ## Components
 
-The SDK provides the following components:
+This template provides the following customizable components:
 
-- **`Chatbot`**: The main chatbot interface.
-- **`ChatbotWindow`**: A container for displaying chat messages.
-- **`ChatInput`**: An input field for user messages.
-- **`Message`**: Displays individual messages from the user and the bot.
-- **`SparkEngineProvider`**: Context provider for managing state and API communication.
-- **`SparkEngineApi`**: API component to interact directly with the Spark Engine backend.
+- **`Chatbot`**: Core interface with wallet integration and XFI payment options.
+- **`ChatbotWindow`**: Secure, user-friendly container for chat messages.
+- **`ChatInput`**: Input field with transaction prompts.
+- **`Message`**: Displays user and bot messages.
+- **`SparkEngineProvider`**: Manages state and API communication.
+- **`SparkEngineApi`**: Allows direct API interaction with Spark Engine.
 
-These components are designed to be modular and customizable, allowing you to build and tailor chat interfaces according to your application’s needs.
+For details on modifying the SDK, refer to the [SparkEngine documentation](https://docs.sparkengine.ai).
 
 ## Example Chatbot Code
 
-Here's an example implementation using the SDK:
-
 ```jsx
 import React from 'react';
-import { Chatbot, ChatbotWindow, ChatInput, Message, SparkEngineProvider } from 'sparkengine';
+import { Chatbot, ChatbotWindow, ChatInput, Message, SparkEngineProvider } from 'crossfi-chatbot';
 
 const HomePage: React.FC = () => {
   return (
-    <SparkEngineProvider>
+    <SparkEngineProvider theme="dark">
       <Chatbot
-        projectId="adbfd15b-1499-4a7a-8cdc-416e8630c33c"
+        projectId="362bc660-dd60-4b89-9ab7-79560cdece73"
         chatApiRoute="/api/chatbot"
-        sparkEngineApiRoute="/api/complete"
-        callSparkEngineWhen="Collect user's favorite color, favorite food, and workplace skills"
+        sparkEngineApiRoute="/api/web3completion"
+        callSparkEngineWhen="Collect game design document request"
         width="90%"
         height="90vh"
         position="center"
         offsetY="5vh"
         conversationHistoryLength={10}
         responseIndices={[0]}
-        initialBackgroundColor="#fcfcfc"
-        title="Blue Themed Chatbot"
-        description="Talk to our blue-themed chatbot!"
-        logo="https://sparkengine.ai/logo.png"
+        initialBackgroundColor="#222"
+        title="CrossFi Chatbot"
+        description="Use advanced AI systems with Spark Engine and $XFI"
+        logo="xfi-logo.png"
       >
         <ChatbotWindow
-          backgroundColor="#fcfcfc"
+          backgroundColor="#222"
           scrollbarSize={6}
+          height="80vh"
           borderRadius="10px"
           boxShadow="0 2px 10px rgba(0,0,0,0.1)"
           px="20px"
+          style={{
+            borderTop: "5px solid #0cc2fe",
+            borderBottom: "1px solid #0cc2fe",
+            borderLeft: "1px solid #0cc2fe",
+            borderRight: "1px solid #0cc2fe",
+          }}
         >
           <Message
-            userColor="#007bff"
-            botColor="#333"
-            userBackground="#e6f2ff"
-            botBackground="#ffffff"
+            userColor="#0cc2fe"
+            botColor="#999"
+            userBackground="#053747"
+            botBackground="#252525"
             userFontSize="1rem"
             botFontSize="1rem"
             px="16px"
             py="8px"
             userBorderRadius="20px 20px 0 20px"
             botBorderRadius="20px 20px 20px 0"
-            userBorder="2px solid #007bff"
-            botBorder="1px solid #ccc"
+            userBorder="2px solid #0cc2fe"
+            botBorder="1px solid #777"
             m="10px 0"
             my="15px"
             mx="10px"
           />
         </ChatbotWindow>
-        <ChatInput />
+        <ChatInput buttonColor="#0cc2fe" />
       </Chatbot>
     </SparkEngineProvider>
   );
@@ -173,88 +185,40 @@ const HomePage: React.FC = () => {
 export default HomePage;
 ```
 
-### Direct API Interaction Example Using `SparkEngineApi`
-
-You can also directly use `SparkEngineApi` to handle API interactions:
-
-```js
-import SparkEngineApi from 'sparkengine';
-
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
-
-  try {
-    const { prompt, projectId } = req.body;
-    const sparkEngine = new SparkEngineApi(process.env.SPARK_ENGINE_API_KEY || '');
-
-    const response = await sparkEngine.createCompletion({
-      prompt,
-      project_id: projectId,
-    });
-
-    console.log(response.data);
-    return res.status(200).json(response.data);
-  } catch (error) {
-    console.error('Error fetching the API response:', error);
-    return res.status(500).json({ error: 'Internal Server Error' });
-  }
-}
-```
-
 ## Deployment Workflow
 
-### Deploying to Vercel
+### Deploying
 
-To deploy the application using Vercel, follow these steps:
+ to Vercel
 
-1. **Push the Project to GitHub**:
-
-   Ensure the project is linked to a repository on GitHub, GitLab, or Bitbucket.
-
-2. **Connect to Vercel**:
-
-   Sign in to Vercel, connect the repository, and set up environment variables in Vercel settings.
-
-   ```bash
-   GROQ_API_KEY=your-groq-api-key
-   SPARK_ENGINE_API_KEY=your-spark-api-key
-   ```
-
-3. **Deploy**:
-
-   Follow Vercel’s deployment steps. The application will be live, and all serverless API routes will be functional.
+1. **Push to GitHub**: Connect the project to a repository.
+2. **Connect to Vercel**: Link the repository on Vercel and add the required environment variables.
+3. **Deploy**: Follow Vercel’s deployment steps to make the app live.
 
 ## Error Handling
 
-The SDK includes error handling for API interactions. If an API call fails, the application will attempt to retry and provide descriptive error messages to users.
-
-### Retry Logic
-
-The application retries failed API calls up to three times before displaying an error notification to the user.
+The chatbot retries failed API calls up to three times, ensuring a smooth experience for users even in cases of minor connectivity issues.
 
 ## Customization
 
-You can customize the chatbot and the UI components as needed:
+You can customize the chatbot by adjusting styles and adding functionality:
 
-- **Add New Features**: Extend the chatbot capabilities by modifying components like `ChatInput` or `Message`.
-- **UI Adjustments**: Change styles and layout in the `components/` folder for a custom user interface.
-- **Task Modifications**: Update `callSparkEngineWhen` to define different tasks and objectives for the chatbot.
+- **New Features**: Add custom components or extend existing ones like `ChatInput` or `Message`.
+- **UI Adjustments**: Modify styles in the components for a branded interface.
+- **Task Customization**: Set different objectives for the chatbot by configuring `callSparkEngineWhen`.
 
 ## License
 
-This project is licensed under the Apache 2.0 License. See the [LICENSE](./LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgments
 
-- **[Next.js](https://nextjs.org/)** for providing the development framework.
-- **[Spark Engine](https://sparkengine.ai)** for their chatbot and multi-agent API support.
-- **[Spark Engine Docs](https://docs.sparkengine.ai)** for additional SDK and API support on this library.
-- **[Spark Engine Github](https://github.com/spark-engine-ai)** for additional Spark Engine open-source tooling.
-- **[Spark Engine Github (Projects)](https://github.com/spark-engine-opensource-projects)** for MIT open-source project examples made by the Spark Engine team and our community.
-- **[Vercel](https://vercel.com)** for easy and scalable deployments.
+- **[Next.js](https://nextjs.org)** for the development framework
+- **[Spark Engine](https://sparkengine.ai)** for AI and multi-agent system support
+- **[CrossFi Blockchain](https://crossfi.org)** for pioneering decentralized financial infrastructure
+
+This project was created by Ammar, Jordan & Jonny from our internal dev team.
 
 ---
 
-For more details and advanced usage, visit the [official SparkEngine documentation](https://docs.sparkengine.ai).
+For more advanced customization, visit the [official SparkEngine documentation](https://docs.sparkengine.ai).

@@ -209,8 +209,19 @@ const Chatbot: React.FC<ChatbotProps> = ({
         sparkEngineResponse
       );
 
+      const transformedSparkEngineResponse = {
+        data: Object.keys(sparkEngineResponse?.data || {}).map((key) => ({
+          output: sparkEngineResponse.data[key]?.response || "Invalid data",
+          name: sparkEngineResponse.data[key]?.title || "Sparkchat",
+        })),
+      };
+
+      console.log(
+        "Here is transformed response",
+        transformedSparkEngineResponse
+      );
       const selectedResponses = (
-        sparkEngineResponse?.data || [
+        transformedSparkEngineResponse?.data || [
           {
             output: "Sorry, something went wrong with Spark Engine.",
             name: "Spark Engine",
@@ -218,7 +229,7 @@ const Chatbot: React.FC<ChatbotProps> = ({
         ]
       ).map((item: any) => ({
         message: item?.output || "Invalid data",
-        sender: item?.name || "Sparkchat",
+        sender: "Sparkchat",
       }));
 
       setMessages((prev) => [

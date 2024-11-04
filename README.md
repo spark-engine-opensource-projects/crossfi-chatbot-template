@@ -220,7 +220,7 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 - **[Spark Engine](https://sparkengine.ai)** for AI and multi-agent system support
 - **[CrossFi Blockchain](https://crossfi.org)** for pioneering decentralized financial infrastructure
 
-This project was created by Ammar, Jordan & Jonny from our internal dev team.
+This project was created by Ammar (the magician), Jordan & Jonny from our internal dev team.
 
 ---
 

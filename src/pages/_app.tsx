@@ -10,15 +10,7 @@ import "@mantine/core/styles.css";
 
 const HomePage: React.FC = () => {
   return (
-    <html lang="en">
-            <head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
-        />
-      </head>
-      <SparkEngineProvider theme="dark">
+    <SparkEngineProvider theme="dark">
       <Chatbot
         projectId="362bc660-dd60-4b89-9ab7-79560cdece73"
         chatApiRoute="/api/chatbot"
@@ -70,7 +62,6 @@ const HomePage: React.FC = () => {
         <ChatInput buttonColor="#0cc2fe" />
       </Chatbot>
     </SparkEngineProvider>
-    </html>
   );
 };
 

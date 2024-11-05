@@ -12,9 +12,9 @@ interface PurchaseCreditsProps {
   fetchCredits: () => Promise<void>;
 }
 
-const TARGET_CHAIN_ID = 4157;
+const TARGET_CHAIN_ID = 4158;
 const DEPLOYED_CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_SMART_CONTRACT_ADDRESS!;
-const XFI_TO_CREDIT_RATE = 0.02;
+const XFI_TO_CREDIT_RATE = 0.05;
 
 export default function PurchaseCredits({
   provider,

@@ -1,4 +1,4 @@
 {
-    "RPCURL":"https://crossfi-testnet.g.alchemy.com/v2/n92RQzU28AD7dgbHOyDt0VAGcLJBjAmK",
-    "ContractAddress": "0x1E713a08d32768c17d2Ff67415AAc43e46d29B55"
+    "RPCURL":"http://rpc.mainnet.ms",
+    "ContractAddress": "0xDb5C548684221Ce2f55F16456Ec5Cf43a028D8e9"
 }

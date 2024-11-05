@@ -5,7 +5,7 @@ import { IconWallet, IconBrandGithub } from "@tabler/icons-react";
 import { ethers, BrowserProvider, JsonRpcSigner } from "ethers";
 import PurchaseCredits from "./PurchaseCredits";
 
-const TARGET_CHAIN_ID = 4157; // Your target network chain ID
+const TARGET_CHAIN_ID = 4158; // Your target network chain ID
 
 interface ConnectWalletProps {
   isConnected: boolean;
